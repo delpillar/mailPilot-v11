@@ -1,7 +1,11 @@
-﻿/// <reference path="../objects/cloud.ts" />
+/// <reference path="../objects/cloud.ts" />
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/plane.ts" />
 /// <reference path="../objects/scoreboard.ts" />
+/// <reference path="../objects/cloud.js" />
+/// <reference path="../objects/island.js" />
+/// <reference path="../objects/plane.js" />
+/// <reference path="../objects/scoreboard.js" />
 var managers;
 (function (managers) {
     // Collision Manager Class
