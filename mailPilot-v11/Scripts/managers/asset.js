@@ -1,14 +1,16 @@
-﻿var managers;
+var managers;
 (function (managers) {
     // Image and Sound Manifest;
     var assetManifest = [
         { id: "loading", src: "assets/images/loading.jpg" },
         { id: "ocean", src: "assets/images/ocean.gif" },
+        { id: "stars", src: "assets/images/space5.jpg" },
         { id: "engine", src: "assets/sounds/engine.ogg" },
         { id: "thunder", src: "assets/sounds/thunder.ogg" },
-        { id: "yay", src: "assets/sounds/yay.ogg" }
+        { id: "yay", src: "assets/sounds/yay.ogg" },
+        { id: "laser", src: "assets/images/beam.png" }
     ];
-
+    
     // SpriteSheet Data Object
     var spriteSheetData = {
         "images": ["assets/images/atlas.png"],
@@ -29,6 +31,33 @@
             "tryAgainButton": [5]
         }
     };
+    
+    var spriteSheetData2 = {
+        "images": ["assets/images/ship2.png"],
+        "frames": [
+            //{width:57.833, height:47},
+            [128,0,42,50],
+            [177,0,42,50],
+            [10,0,48,50],
+            [67,0,48,50],
+            [231,0,48,50],
+            [289,0,48,50],
+        ],
+    
+        "animations": {
+            up:[2,3,,0.2], 
+            idle:[0,1,,0.2], 
+            down:[4,5,,0.2]
+        }
+    };
+    
+    var spriteSheetData3 = {
+        "images": ["assets/images/coin.png"],
+        "frames": {width:50, height:50},
+        "animations": {
+            spin:[0,9,,0.5]
+        }
+    };
 
     // Asset Manager Class
     var Assets = (function () {
@@ -40,6 +69,8 @@
             this.loader.installPlugin(createjs.Sound);
             this.loader.loadManifest(assetManifest);
             this.atlas = new createjs.SpriteSheet(spriteSheetData);
+            this.ship = new createjs.SpriteSheet(spriteSheetData2);
+            this.coin = new createjs.SpriteSheet(spriteSheetData3);
         };
         return Assets;
     })();
