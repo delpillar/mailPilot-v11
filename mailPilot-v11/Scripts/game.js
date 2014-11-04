@@ -1,4 +1,4 @@
-﻿/// <reference path="constants.ts" />
+/// <reference path="constants.ts" />
 /// <reference path="managers/asset.ts" />
 /// <reference path="objects/cloud.ts" />
 /// <reference path="objects/island.ts" />
@@ -59,6 +59,7 @@ function optimizeForMobile() {
 function gameLoop(event) {
     currentStateFunction();
     stage.update();
+    //console.log(createjs.Ticker.getTime());
 }
 
 function changeState(state) {
