@@ -1,4 +1,4 @@
-﻿var __extends = this.__extends || function (d, b) {
+var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     __.prototype = b.prototype;
@@ -14,6 +14,7 @@ var objects;
             _super.call(this, managers.Assets.atlas, buttonIDString);
             this.regX = this.getBounds().width / 2;
             this.regY = this.getBounds().height / 2;
+            this.shadow = new createjs.Shadow("#000000", 2, 3, 10);
             this.x = x;
             this.y = y;
             this.setButtonListeners();
