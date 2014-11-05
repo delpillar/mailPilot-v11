@@ -2,13 +2,17 @@ var managers;
 (function (managers) {
     // Image and Sound Manifest;
     var assetManifest = [
+        //credits to: http://www.tannerhelland.com
+        { id: "gameOver", src: "assets/sounds/Nevermore.mp3" },
+        { id: "gameMusic", src: "assets/sounds/WildWaters.mp3" },
         { id: "loading", src: "assets/images/loading.jpg" },
         { id: "ocean", src: "assets/images/ocean.gif" },
         { id: "stars", src: "assets/images/space5.jpg" },
-        { id: "engine", src: "assets/sounds/engine.ogg" },
-        { id: "thunder", src: "assets/sounds/thunder.ogg" },
-        { id: "yay", src: "assets/sounds/yay.ogg" },
-        { id: "laser", src: "assets/images/beam.png" }
+        { id: "laser", src: "assets/images/beam.png" },
+        //made in http://www.bfxr.net/
+        { id: "shipHit", src: "assets/sounds/shipHit.wav" },
+        { id: "startBtnSound", src: "assets/sounds/startGame.wav" },
+        { id: "coinSound", src: "assets/sounds/Pickup_Coin24.wav" }
     ];
     
     // SpriteSheet Data Object
