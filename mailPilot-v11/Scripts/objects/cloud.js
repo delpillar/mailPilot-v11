@@ -1,6 +1,7 @@
 /// <reference path="../managers/asset.ts" />
 /// <reference path="../managers/asset.js" />
 var objects;
+var laserSound;
 (function (objects) {
     // Cloud class
     var Cloud = (function () {
@@ -23,6 +24,7 @@ var objects;
             if (this.image.x > this.stage.canvas.width + this.width) {
                 this.reset();
             }
+            
         };
 
         Cloud.prototype.reset = function () {
