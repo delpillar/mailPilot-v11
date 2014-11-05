@@ -10,23 +10,23 @@ var objects;
             this.image = new createjs.Bitmap(managers.Assets.loader.getResult("stars"));
             this.width = this.image.getBounds().width;
             this.height = this.image.getBounds().height;
-            //this.image.regX = -this.width;
+            this.image.regX = this.width;
             
             this.reset();
 
-            this.dx = 5;
+            this.dx = 8;
 
             game.addChild(this.image);
         }
         Ocean.prototype.update = function () {
-            this.image.x += this.dx;
-            if (this.image.x >= 0) {
+            this.image.x -= this.dx;
+            if (this.image.x <= stage.canvas.width) {
                 this.reset();
             }
         };
 
         Ocean.prototype.reset = function () {
-            this.image.x = -500;
+            this.image.x = this.width;
         };
 
         Ocean.prototype.destroy = function () {
