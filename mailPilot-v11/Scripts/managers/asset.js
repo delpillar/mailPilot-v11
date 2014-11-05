@@ -19,27 +19,20 @@ var managers;
     var spriteSheetData = {
         "images": ["assets/images/atlas.png"],
         "frames": [
-            [2, 2, 226, 178],
-            [230, 2, 211, 69],
-            [443, 69, 62, 63],
-            [443, 2, 65, 65],
-            [230, 73, 211, 69],
-            [230, 144, 211, 69]
+            [292, 15, 200, 70],
+            [157, 113, 200, 70],
+            [27, 15, 200, 70]
         ],
         "animations": {
-            "cloud": [0],
-            "instructionsButton": [1],
-            "island": [2],
-            "plane": [3],
-            "playButton": [4],
-            "tryAgainButton": [5]
+            "instructionsButton": [0],
+            "tryAgainButton": [1],
+            "playButton": [2]
         }
     };
     
     var spriteSheetData2 = {
         "images": ["assets/images/ship2.png"],
         "frames": [
-            //{width:57.833, height:47},
             [128,0,42,50],
             [177,0,42,50],
             [10,0,48,50],
