@@ -1,18 +1,19 @@
-/// <reference path="constants.ts" />
-/// <reference path="managers/asset.ts" />
-/// <reference path="objects/cloud.ts" />
-/// <reference path="objects/island.ts" />
-/// <reference path="objects/ocean.ts" />
-/// <reference path="objects/plane.ts" />
-/// <reference path="objects/scoreboard.ts" />
-/// <reference path="objects/label.ts" />
-/// <reference path="objects/button.ts" />
-/// <reference path="managers/collision.ts" />
-/// <reference path="states/play.ts" />
-/// <reference path="states/menu.ts" />
-/// <reference path="states/gameover.ts" />
-// Mail Pilot Version 11 - Added basic state machine structure - Added Button and Label classes
-// Changed online repo
+/// <reference path="constants.js" />
+/// <reference path="managers/asset.js" />
+/// <reference path="objects/cloud.js" />
+/// <reference path="objects/island.js" />
+/// <reference path="objects/ocean.js" />
+/// <reference path="objects/plane.js" />
+/// <reference path="objects/scoreboard.js" />
+/// <reference path="objects/label.js" />
+/// <reference path="objects/button.js" />
+/// <reference path="managers/collision.js" />
+/// <reference path="states/play.js" />
+/// <reference path="states/menu.js" />
+/// <reference path="states/gameover.js" />
+/// <reference path="states/instructions.js" />
+// Combatron - Added basic state machine structure - Added Button and Label classes
+
 var stage;
 var game;
 
@@ -59,7 +60,6 @@ function optimizeForMobile() {
 function gameLoop(event) {
     currentStateFunction();
     stage.update();
-    //console.log(createjs.Ticker.getTime());
 }
 
 function changeState(state) {
@@ -86,6 +86,6 @@ function changeState(state) {
             currentStateFunction = states.instructionState;
             //instantiate instructions screen
             states.instructions();
+            break;
     }
 }
-//# sourceMappingURL=game.js.map

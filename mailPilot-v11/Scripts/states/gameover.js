@@ -1,11 +1,11 @@
-/// <reference path="../constants.ts" />
-/// <reference path="../objects/button.ts" />
-/// <reference path="../objects/cloud.ts" />
-/// <reference path="../objects/island.ts" />
-/// <reference path="../objects/label.ts" />
-/// <reference path="../objects/ocean.ts" />
-/// <reference path="../objects/plane.ts" />
-/// <reference path="../objects/scoreboard.ts" />
+/// <reference path="../constants.js" />
+/// <reference path="../objects/button.js" />
+/// <reference path="../objects/cloud.js" />
+/// <reference path="../objects/island.js" />
+/// <reference path="../objects/label.js" />
+/// <reference path="../objects/ocean.js" />
+/// <reference path="../objects/plane.js" />
+/// <reference path="../objects/scoreboard.js" />
 var states;
 (function (states) {
     function gameOverState() {
@@ -74,4 +74,3 @@ var states;
     }
     states.gameOver = gameOver;
 })(states || (states = {}));
-//# sourceMappingURL=gameover.js.map
