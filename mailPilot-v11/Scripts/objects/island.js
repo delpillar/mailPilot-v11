@@ -38,4 +38,4 @@ var objects;
     })();
     objects.Island = Island;
 })(objects || (objects = {}));
-//# sourceMappingURL=island.js.map
+

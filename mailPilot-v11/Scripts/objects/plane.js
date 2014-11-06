@@ -32,4 +32,4 @@ var objects;
     })();
     objects.Plane = Plane;
 })(objects || (objects = {}));
-//# sourceMappingURL=plane.js.map
+

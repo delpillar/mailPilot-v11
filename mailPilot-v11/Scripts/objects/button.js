@@ -36,4 +36,3 @@ var objects;
     })(createjs.Sprite);
     objects.Button = Button;
 })(objects || (objects = {}));
-//# sourceMappingURL=button.js.map

@@ -12,4 +12,3 @@ var constants;
     constants.LABEL_COLOUR = "#FF7B16";
     constants.PLANE_LIVES = 5;
 })(constants || (constants = {}));
-//# sourceMappingURL=constants.js.map
