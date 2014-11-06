@@ -23,23 +23,13 @@ var states;
         },1000);
         
     }
-//    
-//    function backButtonClicked(event) {
-//        createjs.Sound.play("startBtnSound");
-//        game.removeAllChildren();
-//        game.removeAllEventListeners();
-//        currentState = constants.MENU_STATE;
-//        changeState(currentState);
-//        
-//        },1000);
-//        
-//    }
-    
-    
     states.playButtonClicked = playButtonClicked;
     
     function instructionState() {
         ocean.update();
+        plane.image.y = stage.canvas.height/2;
+        plane.image.x = 450;
+       // plane.update();
     }
     states.instructionState = instructionState;
 
@@ -51,7 +41,7 @@ var states;
 
         // Instantiate Game Objects
         ocean = new objects.Ocean(stage, game);
-        //plane = new objects.Plane(stage, game);
+        plane = new objects.Plane(stage, game);
 
         // Show Cursor
         stage.cursor = "default";
@@ -64,12 +54,12 @@ var states;
         game.addChild(gameNameLabel);
 
         // Display Play Again Button
-        playButton = new objects.Button(stage.canvas.width / 2, stage.canvas.height - 100, "playButton");
+        playButton = new objects.Button(stage.canvas.width / 2, stage.canvas.height/2, "playButton");
         game.addChild(playButton);
         playButton.addEventListener("click", playButtonClicked);
 
         stage.addChild(game);
     }
-    states.instruction = instructions;
+    states.instructions = instructions;
 })(states || (states = {}));
-//# sourceMappingURL=menu.js.map
+
