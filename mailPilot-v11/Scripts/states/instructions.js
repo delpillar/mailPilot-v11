@@ -43,7 +43,11 @@ var interval;
     function instructionState() {
         ocean.update();
         plane.image.y = stage.canvas.height/2;
-        plane.image.x = 450;
+        plane.image.x += 5;
+        
+        if(plane.image.x > stage.canvas.width){
+            plane.image.x = 0 - plane.width;
+        }
     }
     states.instructionState = instructionState;
 
@@ -60,13 +64,21 @@ var interval;
         // Show Cursor
         stage.cursor = "default";
 
-        // Display Game Over
+        // Display Game Names label
         gameNameLabel = new objects.Label(stage.canvas.width / 2 + 80, 100, "COMBATRON");
         gameNameLabel.font = "bold 60px Wallpoet";
         gameNameLabel.textAlign = "center";
-        gameNameLabel.shadow = new createjs.Shadow("#ffffff", 5, 5, 5)
+        gameNameLabel.shadow = new createjs.Shadow("#ffffff", 5, 5, 5);
         game.addChild(gameNameLabel);
-
+        
+        // Display Game Instruction text
+        instructionText = new objects.Label(40, stage.canvas.height / 2 + 40 , "You are being hunted by your own kind and you need to escape. \nFind earth while keeping yourself alive.\nDodge the barrage of lasers by moving the mouse around.\nCollect coins for extra score. ");
+        instructionText.regX = 0;
+        instructionText.regY = 0;
+        instructionText.font = "15px Audiowide";
+        instructionText.textAlign = "left";
+        game.addChild(instructionText);
+        
         // Display Play Again Button
         playButton = new objects.Button(stage.canvas.width - 60, stage.canvas.height - 30, "playButton");
         playButton.scaleX = 0.5;
