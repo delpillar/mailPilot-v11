@@ -22,6 +22,7 @@ var objects;
         }
         Plane.prototype.update = function () {
             this.image.y = this.stage.mouseY;
+            this.image.x = this.stage.mouseX;
             
         };
         Plane.prototype.destroy = function () {
