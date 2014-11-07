@@ -24,6 +24,21 @@ var states;
     }
     states.tryAgainClicked = tryAgainClicked;
 
+      function mainMenuButtonClicked(event){
+        createjs.Sound.play("startBtnSound");
+        
+        interval = window.setInterval(function(){
+            stage.removeChild(game);
+            window.clearInterval(interval);
+            plane.destroy();
+            game.removeAllChildren();
+            game.removeAllEventListeners();
+            currentState = constants.MENU_STATE;
+            changeState(currentState);
+        }, 750);
+    }
+    states.mainMenuButtonClicked = mainMenuButtonClicked;
+    
     // Game Over Scene
     function gameOver() {
         var gameOverLabel;
@@ -68,6 +83,12 @@ var states;
             tryAgain = new objects.Button(stage.canvas.width / 2, 300, "tryAgainButton");
             game.addChild(tryAgain);
             tryAgain.addEventListener("click", tryAgainClicked);
+            
+            // Display Main Menu Button
+            mainMenuButton = new objects.Button(stage.canvas.width / 2 , tryAgain.y + 100, "mainMenuButton");
+            game.addChild(mainMenuButton);
+            mainMenuButton.addEventListener("click", mainMenuButtonClicked);
+
 
             
         },2500);
