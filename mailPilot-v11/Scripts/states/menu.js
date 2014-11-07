@@ -29,6 +29,7 @@ var states;
         createjs.Sound.play("startBtnSound");
         
         stage.removeChild(game);
+        plane.destroy();
         game.removeAllEventListeners();
         currentState = constants.INSTRUCTION_STATE;
         changeState(currentState);
