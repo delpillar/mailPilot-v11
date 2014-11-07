@@ -19,14 +19,16 @@ var managers;
     var spriteSheetData = {
         "images": ["assets/images/atlas.png"],
         "frames": [
-            [292, 15, 200, 70],
-            [157, 113, 200, 70],
-            [27, 15, 200, 70]
+            [207, 72, 200, 70],
+            [0, 73, 200, 70],
+            [0, 0, 200, 70],
+            [207, 0, 200, 70]
         ],
         "animations": {
             "instructionsButton": [0],
             "tryAgainButton": [1],
-            "playButton": [2]
+            "playButton": [2],
+            "mainMenuButton": [3]
         }
     };
     
@@ -38,7 +40,7 @@ var managers;
             [10,0,48,50],
             [67,0,48,50],
             [231,0,48,50],
-            [289,0,48,50],
+            [289,0,48,50]
         ],
     
         "animations": {
