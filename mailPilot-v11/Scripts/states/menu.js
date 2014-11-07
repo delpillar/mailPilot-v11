@@ -12,15 +12,15 @@ var states;
         createjs.Sound.play("startBtnSound");
         
         var interval = window.setInterval(function(){
-            stage.removeChild(game);
         window.clearInterval(interval);
+        stage.removeChild(game);
         plane.destroy();
         game.removeAllChildren();
         game.removeAllEventListeners();
         currentState = constants.PLAY_STATE;
         changeState(currentState);
         
-        },1000);
+        },500);
         
     }
     states.playButtonClicked = playButtonClicked;

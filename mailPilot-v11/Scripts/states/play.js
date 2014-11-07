@@ -11,16 +11,17 @@ var states;
 (function (states) {
     function playState() {
         ocean.update();
-        island.update();
         plane.update();
-
-        for (var count = 0; count < constants.CLOUD_NUM; count++) {
-            clouds[count].update();
-        }
-
-        collision.update();
-        scoreboard.update();
-
+        var interval = window.setInterval(function(){
+            window.clearInterval(interval);
+            island.update();
+            for (var count = 0; count < constants.CLOUD_NUM; count++) {
+                clouds[count].update();
+            }
+            collision.update();
+            scoreboard.update();
+        },1000);
+        
         if (scoreboard.lives <= 0) {
             stage.removeChild(game);
             plane.destroy();
