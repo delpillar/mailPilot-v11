@@ -5,6 +5,8 @@ var managers;
         //credits to: http://www.tannerhelland.com
         { id: "gameOver", src: "assets/sounds/Nevermore.mp3" },
         { id: "gameMusic", src: "assets/sounds/WildWaters.mp3" },
+//         { id: "gameOver", src: "" },
+//        { id: "gameMusic", src: "" }, 
         { id: "loading", src: "assets/images/loading.jpg" },
         { id: "ocean", src: "assets/images/ocean.gif" },
         { id: "stars", src: "assets/images/space5.jpg" },
@@ -38,7 +40,7 @@ var managers;
             [10,0,48,50],
             [67,0,48,50],
             [231,0,48,50],
-            [289,0,48,50],
+            [289,0,48,50]
         ],
     
         "animations": {
