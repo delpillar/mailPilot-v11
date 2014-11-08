@@ -28,7 +28,7 @@ var mx, my;
             },30);
                 
              if(this.image.y > my ){
-                //this.image.gotoAndStop(this.idle);
+                this.image.gotoAndStop(this.idle);
                 game.removeChild(this.image);
                 this.image = this.up;
                 this.image.regX = this.width / 2;
@@ -39,8 +39,8 @@ var mx, my;
                 game.addChild(this.image);
             }
             else if(this.image.y < my){
-                //this.image.gotoAndStop(this.idle);
-                //this.image.gotoAndStop(this.up);
+                this.image.gotoAndStop(this.idle);
+                this.image.gotoAndStop(this.up);
                 game.removeChild(this.image);
                 this.image = this.down;
                 this.image.regX = this.width / 2;
