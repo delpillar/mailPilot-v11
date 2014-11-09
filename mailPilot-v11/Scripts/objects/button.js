@@ -4,8 +4,8 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-/// <reference path="../constants.ts" />
-/// <reference path="../managers/asset.ts" />
+/// <reference path="../constants.js" />
+/// <reference path="../managers/asset.js" />
 var objects;
 (function (objects) {
     var Button = (function (_super) {

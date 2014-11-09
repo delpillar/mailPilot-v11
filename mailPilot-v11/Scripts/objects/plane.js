@@ -1,4 +1,3 @@
-/// <reference path="../managers/asset.ts" />
 /// <reference path="../managers/asset.js" />
 var objects;
 var mx, my;
@@ -22,18 +21,15 @@ var mx, my;
             this.engineSound = createjs.Sound.play('gameMusic', createjs.Sound.INTERRUPT_NONE, 0, 1500, -1, 1, 0);
         }
         Plane.prototype.update = function () {
-<<<<<<< .merge_file_a05980
             this.image.y = this.stage.mouseY;
             this.image.x = this.stage.mouseX;
-            
-=======
+
             window.setInterval(function(){
                 mx = this.stage.mouseX;    
                 my = this.stage.mouseY;
-            },30);
+            },10);
                 
-             if(this.image.y > my ){
-                this.image.gotoAndStop(this.idle);
+            if(this.image.y < my ){
                 game.removeChild(this.image);
                 this.image = this.up;
                 this.image.regX = this.width / 2;
@@ -43,9 +39,7 @@ var mx, my;
                 this.image.gotoAndPlay(this.up);
                 game.addChild(this.image);
             }
-            else if(this.image.y < my){
-                this.image.gotoAndStop(this.idle);
-                this.image.gotoAndStop(this.up);
+            else if(this.image.y > my){
                 game.removeChild(this.image);
                 this.image = this.down;
                 this.image.regX = this.width / 2;
@@ -56,8 +50,6 @@ var mx, my;
                 game.addChild(this.image);
             }
             else{
-                this.image.gotoAndStop(this.up);
-                this.image.gotoAndStop(this.down)
                 game.removeChild(this.image);
                 this.image = this.idle;
                 this.image.regX = this.width / 2;
@@ -67,8 +59,8 @@ var mx, my;
                 this.image.gotoAndPlay(this.idle);
                 game.addChild(this.image);
             }
->>>>>>> .merge_file_a02540
         };
+
         Plane.prototype.destroy = function () {
             this.engineSound.stop();
             game.removeChild(this.image);

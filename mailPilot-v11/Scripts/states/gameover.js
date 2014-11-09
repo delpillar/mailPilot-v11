@@ -1,15 +1,15 @@
 /// <reference path="../constants.js" />
 /// <reference path="../objects/button.js" />
-/// <reference path="../objects/cloud.js" />
-/// <reference path="../objects/island.js" />
+/// <reference path="../objects/laser.js" />
+/// <reference path="../objects/coin.js" />
 /// <reference path="../objects/label.js" />
-/// <reference path="../objects/ocean.js" />
+/// <reference path="../objects/space.js" />
 /// <reference path="../objects/plane.js" />
 /// <reference path="../objects/scoreboard.js" />
 var states;
 (function (states) {
     function gameOverState() {
-        ocean.update();
+        space.update();
     }
     states.gameOverState = gameOverState;
 
@@ -49,7 +49,7 @@ var states;
         game = new createjs.Container();
 
         // Instantiate Game Objects
-        ocean = new objects.Ocean(stage, game);
+        space = new objects.Space(stage, game);
         
         //play game over sound
         createjs.Sound.play('gameOver', createjs.Sound.INTERRUPT_NONE, 0, 1500, -1, 1, 0);

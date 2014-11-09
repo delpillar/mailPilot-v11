@@ -1,10 +1,9 @@
-/// <reference path="../managers/asset.ts" />
 /// <reference path="../managers/asset.js" />
 var objects;
 (function (objects) {
-    // Ocean Class
-    var Ocean = (function () {
-        function Ocean(stage, game) {
+    // Space Class
+    var Space = (function () {
+        function Space(stage, game) {
             this.stage = stage;
             this.game = game;
             this.image = new createjs.Bitmap(managers.Assets.loader.getResult("stars"));
@@ -18,22 +17,22 @@ var objects;
 
             game.addChild(this.image);
         }
-        Ocean.prototype.update = function () {
+        Space.prototype.update = function () {
             this.image.x -= this.dx;
             if (this.image.x <= stage.canvas.width) {
                 this.reset();
             }
         };
 
-        Ocean.prototype.reset = function () {
+        Space.prototype.reset = function () {
             this.image.x = this.width;
         };
 
-        Ocean.prototype.destroy = function () {
+        Space.prototype.destroy = function () {
             game.removeChild(this.image);
         };
-        return Ocean;
+        return Space;
     })();
-    objects.Ocean = Ocean;
+    objects.Space = Space;
 })(objects || (objects = {}));
 

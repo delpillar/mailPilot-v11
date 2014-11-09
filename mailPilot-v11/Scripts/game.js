@@ -1,8 +1,8 @@
 /// <reference path="constants.js" />
 /// <reference path="managers/asset.js" />
-/// <reference path="objects/cloud.js" />
-/// <reference path="objects/island.js" />
-/// <reference path="objects/ocean.js" />
+/// <reference path="objects/laser.js" />
+/// <reference path="objects/coin.js" />
+/// <reference path="objects/space.js" />
 /// <reference path="objects/plane.js" />
 /// <reference path="objects/scoreboard.js" />
 /// <reference path="objects/label.js" />
@@ -17,10 +17,10 @@
 var stage;
 var game;
 
-var ocean;
+var space;
 var plane;
-var island;
-var clouds = [];
+var coin;
+var lasers = [];
 var scoreboard;
 
 var collision;

@@ -1,9 +1,9 @@
 /// <reference path="../constants.js" />
 /// <reference path="../objects/scoreboard.js" />
 /// <reference path="../objects/plane.js" />
-/// <reference path="../objects/ocean.js" />
-/// <reference path="../objects/island.js" />
-/// <reference path="../objects/cloud.js" />
+/// <reference path="../objects/space.js" />
+/// <reference path="../objects/coin.js" />
+/// <reference path="../objects/laser.js" />
 /// <reference path="../objects/button.js" />
 /// <reference path="../objects/label.js" />
 var states;
@@ -37,7 +37,7 @@ var states;
     states.instructionButtonClicked = instructionButtonClicked;
     
     function menuState() {
-        ocean.update();
+        space.update();
         plane.image.y = stage.canvas.height/2;
         plane.image.x = 450;
        // plane.update();
@@ -51,7 +51,7 @@ var states;
         game = new createjs.Container();
 
         // Instantiate Game Objects
-        ocean = new objects.Ocean(stage, game);
+        space = new objects.Space(stage, game);
         plane = new objects.Plane(stage, game);
 
         // Show Cursor

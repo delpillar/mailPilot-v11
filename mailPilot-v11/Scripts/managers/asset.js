@@ -3,21 +3,12 @@ var managers;
     // Image and Sound Manifest;
     var assetManifest = [
         //credits to: http://www.tannerhelland.com
-<<<<<<< HEAD
-//        { id: "gameOver", src: "assets/sounds/Nevermore.mp3" },
-//        { id: "gameMusic", src: "assets/sounds/WildWaters.mp3" },
-        { id: "gameOver", src: "" },
-        { id: "gameMusic", src: "" },
-=======
         { id: "gameOver", src: "assets/sounds/Nevermore.mp3" },
         { id: "gameMusic", src: "assets/sounds/WildWaters.mp3" },
-//         { id: "gameOver", src: "" },
-//        { id: "gameMusic", src: "" }, 
-        { id: "loading", src: "assets/images/loading.jpg" },
-        { id: "ocean", src: "assets/images/ocean.gif" },
->>>>>>> feature/shipAnimation
+
         { id: "stars", src: "assets/images/space5.jpg" },
         { id: "laser", src: "assets/images/beam.png" },
+        
         //made in http://www.bfxr.net/
         { id: "shipHit", src: "assets/sounds/shipHit.wav" },
         { id: "startBtnSound", src: "assets/sounds/startGame.wav" },
@@ -53,9 +44,9 @@ var managers;
         ],
     
         "animations": {
-            up:[2,3,,0.2], 
-            idle:[0,1,,0.2], 
-            down:[4,5,,0.2]
+            up:[2,3,,0.3], 
+            idle:[0,1,,0.3], 
+            down:[4,5,,0.3]
         }
     };
     

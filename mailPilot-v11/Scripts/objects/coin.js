@@ -1,9 +1,9 @@
 /// <reference path="../managers/asset.js" />
 var objects;
 (function (objects) {
-    // Island Class
-    var Island = (function () {
-        function Island(stage, game) {
+    // Coin Class
+    var Coin = (function () {
+        function Coin(stage, game) {
             this.stage = stage;
             this.game = game;
             this.image = new createjs.Sprite(managers.Assets.coin, "spin");
@@ -18,8 +18,7 @@ var objects;
 
             game.addChild(this.image);
         }
-        Island.prototype.update = function () {
-            //this.image.x += this.dx*Math.sin(0.4);
+        Coin.prototype.update = function () {
             this.image.x += this.dx;
             this.image.y += this.dy;
             if (this.image.x > this.stage.canvas.width + this.width) {
@@ -34,16 +33,16 @@ var objects;
             
         };
 
-        Island.prototype.reset = function () {
+        Coin.prototype.reset = function () {
             this.image.y = Math.floor(Math.random() * this.stage.canvas.height);
             this.image.x = -this.width;
         };
 
-        Island.prototype.destroy = function () {
+        Coin.prototype.destroy = function () {
             game.removeChild(this.image);
         };
-        return Island;
+        return Coin;
     })();
-    objects.Island = Island;
+    objects.Coin = Coin;
 })(objects || (objects = {}));
 

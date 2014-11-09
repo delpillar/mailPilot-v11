@@ -1,8 +1,8 @@
 /// <reference path="../objects/button.js" />
-/// <reference path="../objects/cloud.js" />
-/// <reference path="../objects/island.js" />
+/// <reference path="../objects/laser.js" />
+/// <reference path="../objects/coin.js" />
 /// <reference path="../objects/label.js" />
-/// <reference path="../objects/ocean.js" />
+/// <reference path="../objects/space.js" />
 /// <reference path="../objects/plane.js" />
 /// <reference path="../objects/scoreboard.js" />
 /// <reference path="../managers/collision.js" />
@@ -10,13 +10,13 @@
 var states;
 (function (states) {
     function playState() {
-        ocean.update();
+        space.update();
         plane.update();
         var interval = window.setInterval(function(){
             window.clearInterval(interval);
-            island.update();
+            coin.update();
             for (var count = 0; count < constants.CLOUD_NUM; count++) {
-                clouds[count].update();
+                lasers[count].update();
             }
             collision.update();
             scoreboard.update();
@@ -40,22 +40,22 @@ var states;
         game = new createjs.Container();
 
         // Instantiate Game Objects
-        ocean = new objects.Ocean(stage, game);
-        island = new objects.Island(stage, game);
+        space = new objects.Space(stage, game);
+        coin = new objects.Coin(stage, game);
         plane = new objects.Plane(stage, game);
 
         // Show Cursor
         stage.cursor = "none";
 
         for (var count = 0; count < constants.CLOUD_NUM; count++) {
-            clouds[count] = new objects.Cloud(stage, game);
+            lasers[count] = new objects.Laser(stage, game);
         }
 
         // Display Scoreboard
         scoreboard = new objects.Scoreboard(stage, game);
 
         // Instantiate Collision Manager
-        collision = new managers.Collision(plane, island, clouds, scoreboard);
+        collision = new managers.Collision(plane, coin, lasers, scoreboard);
 
         stage.addChild(game);
     }
